@@ -1,0 +1,40 @@
+<div class='department'>
+	<div class='container'>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>STT</th>
+          <th>Ma NV</th>
+          <th>Ten NV</th>
+          <th>Chuc danh</th>
+          <th>SDT</th>
+          <th>Email</th>
+          <th>Kieu nhan dang</th>
+				</tr>
+      </thead>
+      <tbody *ngIf="total == 0">
+        <tr>
+          <td>
+            Chưa có dữ liệu
+          </td>
+        </tr>
+      </tbody>
+			<tbody *ngIf="total > 0">
+				<tr *ngFor = "let item of logs; let i = index">
+					<td>{{i+1}}</td>
+          <td>{{item.EmployeeCode}}</td>  
+          <td>{{item.EmployeeName}}</td>
+          <td>{{item.EmployeeTitle}}</td>
+          <td>{{item.EmployeePhone}}</td>    
+          <td>{{item.EmployeeEmail}}</td>  
+          <td>{{item.StyleScan}}</td>  
+				</tr>
+			</tbody>
+		</table>
+  </div>	
+  
+  <button type="button"  class="btn btn-danger">
+    Export
+  </button>
+
+</div>
